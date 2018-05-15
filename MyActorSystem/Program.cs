@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Akka.Actor;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,12 @@ namespace MyActorSystem
     {
         static void Main(string[] args)
         {
+            ActorSystem
+                .Create("MyActorSystem")
+                .Terminate()
+                .Wait();
         }
+
+
     }
 }
